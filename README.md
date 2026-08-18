@@ -33,18 +33,23 @@ Streamlit web application.
   `1` = Has had heart disease/attack)
 - **Task type:** Binary classification
 
-> ⚠️ **Note:** The raw CSV is not committed to this repository due to its
+> Note: The raw CSV is not committed to this repository due to its
 > size. Download it from the Kaggle link above and place it at
 > `data/heart_disease_health_indicators_BRFSS2015.csv` before running
 > `model/train_models.py`.
 
 ## c. GitHub Repository Link
 
-`<PASTE YOUR GITHUB REPO LINK HERE AFTER PUSHING>`
+`https://github.com/Prajakta-Surve/ML_Assignment2_PrajaktaSurve.git`
 
 ## d. Models Used
 
-Run the training script to populate this table with your actual results:
+## Models Implemented
+- Logistic Regression  
+- Decision Tree  
+- k‑Nearest Neighbors (kNN)  
+- Naive Bayes  
+- Random Forest (Ensemble)
 
 ```bash
 cd model
@@ -52,7 +57,7 @@ python train_models.py --data ../data/heart_disease_health_indicators_BRFSS2015.
 ```
 
 This prints the metrics to console and saves them to
-`model/metrics_comparison.csv`. Copy the values into the table below.
+`model/metrics_comparison.csv`. Copied the values into the table below.
 
 | ML Model Name           | Accuracy | AUC   | Precision | Recall | F1    | MCC   |
 |-------------------------|----------|-------|-----------|--------|-------|-------|
@@ -75,7 +80,7 @@ This prints the metrics to console and saves them to
 | Random Forest (Ensemble)| Strong accuracy and AUC, but recall is weak; overall stable and robust model. |
 | **Overall Winner**      | Random Forest (Ensemble) — most consistent across metrics, though Naive Bayes had the best recall. |
 **Summary:**  
-Across all models, accuracy is high but recall is consistently low due to class imbalance in the dataset. Naive Bayes stands out for capturing more positive cases (higher recall), while Random Forest provides the most balanced performance overall. Logistic Regression remains a strong baseline with high AUC. For deployment, Random Forest is chosen as the overall winner for its robustness and consistency.
+Across all models, accuracy is high but recall is consistently low due to class imbalance in the dataset. Naive Bayes stands out for capturing more positive cases (higher recall), while Random Forest provides the most balanced performance overall. Logistic Regression remains a strong baseline with high AUC. For deployment, Random Forest is chosen as the overall winner for its robustness and consistency. This demonstrates the trade‑off between accuracy and recall in medical prediction tasks, where capturing positive cases is often more critical.
 >
 
 ## Project Structure
@@ -98,9 +103,6 @@ Across all models, accuracy is high but recall is consistently low due to class 
 │   ├── feature_columns.pkl
 │   ├── uses_scaled.pkl
 │   └── metrics_comparison.csv
-
-## How to Run Locally
-
 
 ## How to Run Locally
 
@@ -134,11 +136,11 @@ Across all models, accuracy is high but recall is consistently low due to class 
 3. Click **New App**, select your repository and branch (`main`), and set
    the main file path to `app.py`.
 4. Click **Deploy**.
-5. Once live, use the sidebar to upload `test_data.csv` (or rely on the
-   bundled copy), pick a model from the dropdown, and view metrics, the
+5. Once live, use the sidebar to upload `test_data.csv`, pick a model from the dropdown, and view metrics, the
    confusion matrix, and the classification report.
 
 ## Screenshot
-
-*(Insert your screenshot of running this assignment on the BITS Virtual Lab
-here, and also include it in your final submission PDF as required.)*
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
