@@ -79,6 +79,7 @@ This prints the metrics to console and saves them to
 | Naive Bayes             | Lowest accuracy, but recall is much higher — catches more positives, though precision suffers. |
 | Random Forest (Ensemble)| Strong accuracy and AUC, but recall is weak; overall stable and robust model. |
 | **Overall Winner**      | Random Forest (Ensemble) — most consistent across metrics, though Naive Bayes had the best recall. |
+
 **Summary:**  
 Across all models, accuracy is high but recall is consistently low due to class imbalance in the dataset. Naive Bayes stands out for capturing more positive cases (higher recall), while Random Forest provides the most balanced performance overall. Logistic Regression remains a strong baseline with high AUC. For deployment, Random Forest is chosen as the overall winner for its robustness and consistency. This demonstrates the trade‑off between accuracy and recall in medical prediction tasks, where capturing positive cases is often more critical.
 >
