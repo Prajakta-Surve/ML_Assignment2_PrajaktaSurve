@@ -33,10 +33,6 @@ Streamlit web application.
   `1` = Has had heart disease/attack)
 - **Task type:** Binary classification
 
-> Note: The raw CSV is not committed to this repository due to its
-> size. Download it from the Kaggle link above and place it at
-> `data/heart_disease_health_indicators_BRFSS2015.csv` before running
-> `model/train_models.py`.
 
 ## c. GitHub Repository Link
 
@@ -69,7 +65,6 @@ This prints the metrics to console and saves them to
 
 ### Observations
 
-| ML Model Name | Observation about model performance |
 
 | ML Model Name           | Observation about model performance |
 |-------------------------|-------------------------------------|
@@ -82,7 +77,7 @@ This prints the metrics to console and saves them to
 
 **Summary:**  
 Across all models, accuracy is high but recall is consistently low due to class imbalance in the dataset. Naive Bayes stands out for capturing more positive cases (higher recall), while Random Forest provides the most balanced performance overall. Logistic Regression remains a strong baseline with high AUC. For deployment, Random Forest is chosen as the overall winner for its robustness and consistency. This demonstrates the trade‑off between accuracy and recall in medical prediction tasks, where capturing positive cases is often more critical.
->
+
 
 ## Project Structure
 
@@ -115,14 +110,17 @@ Across all models, accuracy is high but recall is consistently low due to class 
 
 2. Download the dataset from Kaggle and place it at
    `data/heart_disease_health_indicators_BRFSS2015.csv`.
+>Note: The raw CSV is not committed to this repository due to its
+> size. Download it from the Kaggle link above and place it at
+> `data/heart_disease_health_indicators_BRFSS2015.csv` before running
+
 3. Train the models:
    ```bash
    cd model
    python train_models.py --data ../data/heart_disease_health_indicators_BRFSS2015.csv
    cd ..
    ```
-   This creates the `.pkl` model files, `model/metrics_comparison.csv`, and
-   `test_data.csv` at the project root.
+ 
 4. Launch the app:
    ```bash
    streamlit run app.py
